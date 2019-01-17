@@ -1,6 +1,6 @@
 {
-    "name": "es/auth",
-    "description": "Event sourced User component.",
+    "name": "kpicaza/expressive-jwt-auth",
+    "description": "Zend expressive JWT auth component.",
     "type": "library",
     "license": "MIT",
     "require": {
