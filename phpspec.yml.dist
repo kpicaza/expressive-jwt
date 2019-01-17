@@ -1,0 +1,17 @@
+extensions:
+  Memio\SpecGen\MemioSpecGenExtension: ~
+  # ... other extensions ...
+  # leanphp/phpspec-code-coverage
+  LeanPHP\PhpSpec\CodeCoverage\CodeCoverageExtension:
+    format:
+      - text
+      - html
+    output:
+      html: ../../public/coverage/user/
+      #clover: coverage.xml
+      #php: coverage.php
+      #xml: coverage
+    whitelist:
+      - src
+suites:
+  default: ~

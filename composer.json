@@ -1,0 +1,39 @@
+{
+    "name": "es/auth",
+    "description": "Event sourced User component.",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^7.2",
+        "rbdwllr/reallysimplejwt": "^1.1",
+        "sandrokeil/interop-config": "^2.1"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "^4.2",
+        "memio/spec-gen": "^0.8",
+        "leanphp/phpspec-code-coverage": "^4.2",
+        "phpstan/phpstan": "^0.9",
+        "squizlabs/php_codesniffer": "^2.9.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Auth\\": "src/Auth"
+        }
+    },
+    "scripts": {
+        "check": [
+            "@cs-check",
+            "@test",
+            "@inspect"
+        ],
+        "cs-check": "phpcs src --colors",
+        "cs-fix": "phpcbf src --colors",
+        "inspect": "phpstan analyse src -l7 --ansi -n",
+        "test": "phpspec run --format=dot --ansi"
+    },
+    "extra": {
+        "zf": {
+            "config-provider": "Auth\\Infrastructure\\Framework\\ExpressiveConfigProvider"
+        }
+    }
+}
