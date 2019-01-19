@@ -35,7 +35,7 @@ $aggregator = new ConfigAggregator([
 // config/autoload/jwt-auth.global.php
 
 return [
-    'auth' => [
+    'jwt_auth' => [
         'secret' => '0Super@#Secret$$String!!',
         'expiration' => 3600,
         'issuer' => 'Dev Lab App'

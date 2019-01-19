@@ -20,7 +20,7 @@ class ExpressiveConfigProvider
                     ValidateToken::class => ReallySimpleJWTValidateTokenFactory::class,
                 ],
             ],
-            'auth' => [
+            'jwt_auth' => [
                 'secret' => '0Super@#Secret$$String!!',
                 'expiration' => 3600,
                 'issuer' => 'Dev Lab App'

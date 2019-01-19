@@ -16,7 +16,7 @@ class ReallySimpleJWTValidateTokenFactory implements RequiresConfig
 
     public function __invoke(ContainerInterface $container): ValidateToken
     {
-        $config = $this->options($container->get('config'), 'auth');
+        $config = $container->get('config')['jwt_auth'];
 
         return new ReallySimpleJWTValidateToken(
             new TokenConfig(
@@ -32,6 +32,6 @@ class ReallySimpleJWTValidateTokenFactory implements RequiresConfig
      */
     public function dimensions(): iterable
     {
-        return ['auth'];
+        return ['jwt_auth'];
     }
 }

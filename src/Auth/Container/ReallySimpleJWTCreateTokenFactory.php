@@ -16,7 +16,7 @@ class ReallySimpleJWTCreateTokenFactory implements RequiresConfig
 
     public function __invoke(ContainerInterface $container): CreateToken
     {
-        $config = $container->get('config')['auth'];
+        $config = $container->get('config')['jwt_auth'];
 
         return new ReallySimpleJWTCreateToken(
             new TokenConfig(

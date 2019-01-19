@@ -24,7 +24,7 @@ class ReallySimpleJWTValidateToken implements ValidateToken
         Jwt::validate((string)$token, $this->secret);
 
         return Payload::fromJsonString(
-            Jwt::getPayload('token')
+            Jwt::getPayload((string)$token)
         );
     }
 }
